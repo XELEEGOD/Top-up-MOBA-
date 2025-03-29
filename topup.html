@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Up Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+        .discount {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Top-Up Game</h2>
+        <label for="game">Pilih Game:</label>
+        <select id="game">
+            <option value="freefire">Free Fire</option>
+            <option value="mobilelegends">Mobile Legends</option>
+            <option value="pubg">PUBG Mobile</option>
+        </select><label for="idgame">Masukkan ID Game:</label>
+    <input type="text" id="idgame" placeholder="Masukkan ID Anda">
+    
+    <label for="diamond">Pilih Jumlah Diamond:</label>
+    <select id="diamond">
+        <option value="100">100 Diamond</option>
+        <option value="500">500 Diamond</option>
+        <option value="1000">1000 Diamond</option>
+    </select>
+    
+    <button>Bayar via QRIS</button>
+    <p class="discount">Diskon Anda: 0.1%</p>
+</div>
+
+</body>
+</html>
