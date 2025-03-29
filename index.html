@@ -86,6 +86,34 @@
         alert("Pembayaran berhasil! Terima kasih telah top-up.");
     }
 </script>
+    <script>
+    function sendMessage() {
+        let userInput = document.getElementById("userInput");
+        let chatBox = document.getElementById("chatBox");
+
+        if (userInput.value.trim() !== "") {
+            // Tambahkan pesan pengguna
+            let userMessage = `<p><b>Anda:</b> ${userInput.value}</p>`;
+            chatBox.innerHTML += userMessage;
+
+            // Balasan otomatis bot
+            setTimeout(() => {
+                let botReply = `<p><b>Bot:</b> Maaf, saya masih belajar! 😊</p>`;
+                chatBox.innerHTML += botReply;
+                chatBox.scrollTop = chatBox.scrollHeight; // Auto scroll
+            }, 1000);
+
+            userInput.value = ""; // Kosongkan input setelah dikirim
+        }
+    }
+
+    // Kirim pesan dengan tombol "Enter"
+    document.getElementById("userInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    });
+</script>
 
 </body>
 </html>
