@@ -89,9 +89,10 @@
             let userMessage = `<p><b>Anda:</b> ${userInput.value}</p>`;
             chatBox.innerHTML += userMessage;
 
-            // Balasan otomatis bot
+            // Balasan otomatis bot 
             setTimeout(() => {
-                let botReply = `<p><b>Bot:</b> Maaf, saya masih belajar! 😊</p>`;
+                let botReply = `<p><b>Bot:</b> Maaf, silahkan Hubungi nomor ini:
+                085815439254😊</p>`;
                 chatBox.innerHTML += botReply;
                 chatBox.scrollTop = chatBox.scrollHeight; // Auto scroll
             }, 1000);
