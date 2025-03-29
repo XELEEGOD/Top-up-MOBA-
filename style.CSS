@@ -39,6 +39,34 @@
             cursor: not-allowed;
         }
     </style>
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.chat-box {
+    max-height: 200px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+input {
+    width: 80%;
+    padding: 5px;
+}
+button {
+    width: 18%;
+    padding: 5px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 </head>
 <body>
     <div class="container">
