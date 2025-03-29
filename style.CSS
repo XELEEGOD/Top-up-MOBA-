@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XELEEGOD Top-Up Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://wallpaperaccess.com/full/123219.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        select, input, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Top-Up Game</h2>
+        <label for="game">Pilih Game:</label>
+        <select id="game">
+            <option value="Free Fire">Free Fire</option>
+            <option value="Mobile Legends">Mobile Legends</option>
+            <option value="PUBG Mobile">PUBG Mobile</option>
+            <option value="Genshin Impact">Genshin Impact</option>
+            <option value="Valorant">Valorant</option>
+        </select><label for="idGame">Masukkan ID Game:</label>
+    <input type="text" id="idGame" placeholder="Masukkan ID Game" oninput="validateInput()">
+    
+    <label for="diamond">Pilih Jumlah Diamond:</label>
+    <select id="diamond">
+        <option value="100">100 Diamond</option>
+        <option value="200">200 Diamond</option>
+        <option value="500">500 Diamond</option>
+        <option value="1000">1000 Diamond</option>
+    </select>
+    
+    <label for="payment">Pilih Metode Pembayaran:</label>
+    <select id="payment">
+        <option value="QRIS">QRIS</option>
+        <option value="GoPay">GoPay</option>
+        <option value="Dana">Dana</option>
+        <option value="OVO">OVO</option>
+        <option value="ShopeePay">ShopeePay</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+    </select>
+    
+    <button id="payButton" onclick="pay()" disabled>Bayar</button>
+    <p id="discount">Diskon Anda: 0.1%</p>
+</div>
+
+<script>
+    function validateInput() {
+        const idGame = document.getElementById("idGame").value;
+        const payButton = document.getElementById("payButton");
+        payButton.disabled = idGame.trim() === "";
+    }
+    
+    function pay() {
+        swal("Pembayaran Berhasil!", "Terima kasih telah top-up di XELEEGOD Store.", "success");
+    }
+</script>
+
+</body>
+</html>
